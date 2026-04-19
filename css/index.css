@@ -38,7 +38,8 @@ body {
 /* Style navbar */
 header {
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 20;
   justify-content: space-between;
   align-items: center;
@@ -65,24 +66,21 @@ header {
 
 /* menu */
 .menu {
-  display: flex;
-}
-.menu .navbar {
-  position: absolute;
-  padding: 0 16px 20px;
-  top: 80px;
-  left: 0;
   width: 100%;
+  padding: 0 16px 20px;
+  background-color: black;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 20px;
+  position: absolute;
+  top: 75px;
+  left: 0;
   z-index: 10;
   transform: translateY(-200%);
-  transition: 0.3s;
-  background-color: black;
 }
 
-.menu.open .navbar {
+.menu.open {
+  transition: 0.3s;
   transform: translateY(0);
 }
 
@@ -99,6 +97,23 @@ header {
   font-size: 16px;
 }
 
+/* btn-container */
+.btn-container {
+  background-color: black;
+  padding: 10px 16px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 220px;
+  left: 0;
+  transform: translateY(-500%);
+}
+
+.btn-container.open {
+  transition: 0.3s;
+  transform: translateY(0);
+}
+
 /* Style tombol Contact Us */
 .btn {
   position: relative;
@@ -106,7 +121,7 @@ header {
   width: 100%;
   font-weight: 600;
   font-size: 14px;
-  padding: 16px;
+  padding: 12px;
   background-color: #421abc;
   color: #ffffff;
   border-radius: 9999px;
@@ -121,6 +136,7 @@ header {
   z-index: 40;
   gap: 4px;
   width: 24px;
+  cursor: pointer;
 }
 
 .hamburger-button span {
@@ -149,21 +165,21 @@ header {
   background: linear-gradient(to top, #210a5e4d, transparent);
 }
 
-.hero .hero-text {
+.hero .text {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.hero .hero-text h2 {
+.hero .text h2 {
   font-weight: 700;
   color: #fdfdfd;
   font-size: 50px;
 }
-.hero .hero-text h2 span {
+.hero .text h2 span {
   font-style: italic;
 }
-.hero .hero-text p {
+.hero .text p {
   color: #717680;
   font-weight: 300;
   font-size: 16px;
@@ -377,7 +393,6 @@ textarea::placeholder {
   font-size: 14px;
 }
 
-/* ----------------------------- */
 /* 8. footer */
 footer {
   padding: 24px 20px;
@@ -399,44 +414,103 @@ footer a:hover {
   text-decoration: underline;
 }
 
+@media (min-width: 768px) {
+  /* 1. Header */
+  header {
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+  .bg-header {
+    display: none;
+  }
+  .menu {
+    width: auto;
+    align-items: center;
+    padding: 0;
+    position: static;
+    transition: none;
+    transform: translateY(0);
+  }
+
+  .menu .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .btn-container {
+    padding: 0;
+    max-width: 160px;
+    transform: translateY(0);
+    position: static;
+    transition: none;
+  }
+
+  /* 2. Hero section */
+  .hero {
+    flex-direction: row;
+    padding: 24px 40px;
+  }
+
+  .hero .btn {
+    max-width: 300px;
+  }
+
+  .hero .pict {
+    margin-top: 0;
+    scale: 1.2;
+    transform: translateX(-20px) translateY(3px);
+  }
+
+  /* 3. Who we are section */
+  .who-we-are {
+    padding: 40px 40px;
+  }
+
+  /* 4. What we do section */
+
+  .what-we-do {
+    padding: 40px 40px;
+  }
+  /* 5. Our work section */
+  .our-work {
+    padding: 40px 40px;
+  }
+
+  /* 6. Meet the Team Section */
+  .meet-the-team {
+    padding: 40px 40px;
+  }
+
+  .members {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 100px;
+  }
+
+  /* 7. Let’s Collaborate Section */
+  .let-us-colaborate {
+    padding: 40px 40px;
+  }
+}
+
 @media (min-width: 1000px) {
   .container {
     max-width: 1400px;
     margin: auto;
   }
 
+  /* 1. Header */
   header {
     padding: 24px 140px;
   }
 
-  .bg-header {
-    display: none;
-  }
-
-  /* .menu {
-    width: 60%;
-  } */
-
-  .menu .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-
-    position: static;
-    transform: translateY(0);
-  }
-
-  .menu .navbar .nav-links {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-
   .hamburger-button {
     display: none;
-  }
-  .menu .btn {
-    max-width: 160px;
   }
 }
