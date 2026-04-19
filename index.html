@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,174 +16,183 @@
   </head>
   <body>
     <!-- code here -->
-    <!-- 1. Header -->
-    <!-- navbar -->
-    <header>
-      <nav class="navbar">
-        <div class="frame"><a href="#" class="tech">Tech.</a></div>
+    <div class="container">
+      <!-- 1. Header -->
+      <header>
+        <div class="bg-header"></div>
+        <h1 class="logo"><a href="#">Tech.</a></h1>
 
-        <ul class="nav-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Our Work</a></li>
-          <li><a href="#">Team</a></li>
-        </ul>
+        <div class="menu">
+          <nav class="navbar">
+            <ul class="nav-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Our Work</a></li>
+              <li><a href="#">Team</a></li>
+            </ul>
+          </nav>
+          <button class="btn">Contact Us</button>
+        </div>
 
-        <button class="contact-us">Contact Us</button>
-
-        <!-- icon humberger untuk mobile -->
-        <div class="hamburger">
+        <div class="hamburger-button">
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </nav>
-    </header>
+      </header>
 
-    <!-- 2. Hero section -->
-    <section class="Hero">
-      <div class="hero-text">
-        <h1>Build with the <span>Future.</span></h1>
-        <p>
-          From building sleek websites and mobile apps to integrating AI
-          solutions, we help brands turn ideas into powerful digital experiences
-          that connect, engage, and scale.
-        </p>
-        <button class="talk">Let's Talk</button>
-      </div>
-      <div class="pict">
-        <img src="./assets/images/hero-hand.png" alt="phone" />
-      </div>
-    </section>
+      <!-- 2. Hero section -->
+      <section class="hero">
+        <div class="hero-text">
+          <h2>Build with the <span>Future.</span></h2>
+          <p>
+            From building sleek websites and mobile apps to integrating AI
+            solutions, we help brands turn ideas into powerful digital
+            experiences that connect, engage, and scale.
+          </p>
+          <button class="btn">Let's Talk</button>
+        </div>
+        <div class="pict">
+          <img src="./assets/images/hero-hand.png" alt="phone" />
+        </div>
+      </section>
 
-    <!-- 3. Who we are section -->
-    <section class="who">
-      <div class="who-text">
-        <h1>Who we are</h1>
+      <!-- 3. Who we are section -->
+      <section class="who-we-are">
+        <h2>Who we are</h2>
         <p>
           We're a group of tech students trained in
           <span>building real-world digital products</span>. From coding to
           design, we <span>craft modern solutions for modern problems</span>.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <!-- 4. What we do section -->
-    <section class="what">
-      <div class="what-text">
-        <h1>What We Do</h1>
-        <p>We offer simple tech solutions to help your ideas grow.</p>
-      </div>
+      <!-- 4. What we do section -->
+      <section class="what-we-do">
+        <div class="text">
+          <h2>What We Do</h2>
+          <p>We offer simple tech solutions to help your ideas grow.</p>
+        </div>
 
-      <div class="card-grid">
-        <!-- card 1 -->
-        <div class="card">
-          <img src="./assets/images/Website.png" alt="Website" />
-          <h3>Web Development</h3>
-          <p>Modern websites using HTML, CSS, JavaScript, and frameworks.</p>
+        <div class="card-grid">
+          <!-- card 1 -->
+          <div class="card">
+            <img src="./assets/images/Website.png" alt="Website" />
+            <h3>Web Development</h3>
+            <p>Modern websites using HTML, CSS, JavaScript, and frameworks.</p>
+          </div>
+          <!-- card 2 -->
+          <div class="card">
+            <img src="./assets/images/Mobile.png" alt="Mobile" />
+            <h3>App Development</h3>
+            <p>Mobile and desktop apps tailored for your needs</p>
+          </div>
+          <!-- card 3 -->
+          <div class="card">
+            <img src="./assets/images/AI.png" alt="AI" />
+            <h3>AI Integration</h3>
+            <p>Smart solutions using AI-powered tools and automation.</p>
+          </div>
+          <!-- card 4 -->
+          <div class="card">
+            <img src="./assets/images/Paint.png" alt="paint" />
+            <h3>UI/UX Design</h3>
+            <p>Clean and functional designs for better user experience.</p>
+          </div>
+          <!-- card 5  -->
+          <div class="card">
+            <img src="./assets/images/Landing Page.png" alt="Landing page" />
+            <h3>Landing Page Design</h3>
+            <p>High-converting landing pages for your product or business.</p>
+          </div>
+          <!-- card 6 -->
+          <div class="card">
+            <img src="./assets/images/CMS.png" alt="CMS" />
+            <h3>CMS Integration</h3>
+            <p>Easy-to-manage websites with WordPress or Webflow.</p>
+          </div>
         </div>
-        <!-- card 2 -->
-        <div class="card">
-          <img src="./assets/images/Mobile.png" alt="Mobile" />
-          <h3>App Development</h3>
-          <p>Mobile and desktop apps tailored for your needs</p>
-        </div>
-        <!-- card 3 -->
-        <div class="card">
-          <img src="./assets/images/AI.png" alt="AI" />
-          <h3>AI Integration</h3>
-          <p>Smart solutions using AI-powered tools and automation.</p>
-        </div>
-        <!-- card 4 -->
-        <div class="card">
-          <img src="./assets/images/Paint.png" alt="paint" />
-          <h3>UI/UX Design</h3>
-          <p>Clean and functional designs for better user experience.</p>
-        </div>
-        <!-- card 5  -->
-        <div class="card">
-          <img src="./assets/images/Landing Page.png" alt="Landing page" />
-          <h3>Landing Page Design</h3>
-          <p>High-converting landing pages for your product or business.</p>
-        </div>
-        <!-- card 6 -->
-        <div class="card">
-          <img src="./assets/images/CMS.png" alt="CMS" />
-          <h3>CMS Integration</h3>
-          <p>Easy-to-manage websites with WordPress or Webflow.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 5. Our work section -->
-    <section class="our-work">
-      <div class="our-work-text">
-        <h1>Our Work</h1>
-        <p>See what we've built with passion and purpose</p>
-      </div>
-      <div class="Portfolio-grid">
-        <!-- card 1 -->
-        <div class="Portfolio">
-          <img
-            src="./assets/images/Portfolio Card 1.png"
-            alt="portofoliocard1"
-          />
+      <!-- 5. Our work section -->
+      <section class="our-work">
+        <div class="text">
+          <h2>Our Work</h2>
+          <p>See what we've built with passion and purpose</p>
         </div>
-        <!-- card 2 -->
-        <div class="Portfolio">
-          <img
-            src="./assets/images/Portfolio Card 2.png"
-            alt="portofoliocard2"
-          />
+        <div class="portfolio-card">
+          <!-- card 1 -->
+          <div class="Portfolio">
+            <img
+              src="./assets/images/Portfolio Card 1.png"
+              alt="portofoliocard1"
+            />
+          </div>
+          <!-- card 2 -->
+          <div class="Portfolio">
+            <img
+              src="./assets/images/Portfolio Card 2.png"
+              alt="portofoliocard2"
+            />
+          </div>
+          <!-- card 3 -->
+          <div class="Portfolio">
+            <img
+              src="./assets/images/Portfolio Card 3.png"
+              alt="portofoliocard3"
+            />
+          </div>
         </div>
-        <!-- card 3 -->
-        <div class="Portfolio">
-          <img
-            src="./assets/images/Portfolio Card 3.png"
-            alt="portofoliocard3"
-          />
+      </section>
+
+      <!-- 6. Meet the Team Section -->
+      <section class="meet-the-team">
+        <div class="text">
+          <h2>Meet the Team</h2>
+          <p>A group of future-ready tech makers.</p>
         </div>
-      </div>
-    </section>
 
-    <!-- 6. Meet the Team Section -->
-    <section class="team">
-      <div class="team-text">
-        <h1>Meet the Team</h1>
-        <p>A group of future-ready tech makers.</p>
-      </div>
+        <!-- picture -->
+        <div class="members">
+          <img src="./assets/images/Team Member Card1.png" alt="Member Card1" />
+          <img src="./assets/images/Team Member Card2.png" alt="Member Card2" />
+          <img src="./assets/images/Team Member Card3.png" alt="Member Card3" />
+          <img src="./assets/images/Team Member Card4.png" alt="Member Card4" />
+        </div>
+      </section>
 
-      <!-- picture -->
-      <div class="member-container">
-        <img src="./assets/images/Team Member Card1.png" alt="Member Card1" />
-        <img src="./assets/images/Team Member Card2.png" alt="Member Card2" />
-        <img src="./assets/images/Team Member Card3.png" alt="Member Card3" />
-        <img src="./assets/images/Team Member Card4.png" alt="Member Card4" />
-      </div>
-    </section>
+      <!-- 7. Let’s Collaborate Section -->
+      <section class="let-us-colaborate">
+        <div class="text">
+          <h2>Let's Collaborate</h2>
+          <p>Need a tech team? We're ready to help</p>
+        </div>
 
-    <!-- 7. Let’s Collaborate Section -->
-    <section class="Collaborate">
-      <div class="Collaborate-text">
-        <h1>Let's Collaborate</h1>
-        <p>Need a tech team? We're ready to help</p>
-      </div>
+        <!-- Form -->
+        <form class="form">
+          <div class="name">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter your email" />
+          </div>
+          <div class="message">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter your message"></textarea>
+          </div>
+          <button class="btn">Send</button>
+        </form>
+      </section>
 
-      <!-- Form -->
-      <form class="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Enter your name" />
-        <label for="email">Email</label>
-        <input type="text" id="email" placeholder="Enter your email" />
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Enter your message"></textarea>
-        <button class="Send-btn">Send</button>
-      </form>
-    </section>
+      <!-- 8. footer -->
+      <footer>
+        &copy 2026 Created By
+        <a href="https://github.com/Hary300" target="_blank">Hary300</a>
+      </footer>
+    </div>
 
-    <!-- 8. footer -->
-    <footer>
-      <p>© 2025 Web Programming Hack. All rights reserved.</p>
-    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
