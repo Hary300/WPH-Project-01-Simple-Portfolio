@@ -20,19 +20,21 @@
       <!-- 1. Header -->
       <header>
         <div class="bg-header"></div>
-        <h1 class="logo"><a href="#">Tech.</a></h1>
+        <h1 class="logo"><a href="#home">Tech.</a></h1>
 
         <nav class="menu">
           <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Our Work</a></li>
-            <li><a href="#">Team</a></li>
+            <li class="nav-menu"><a href="#about">About</a></li>
+            <li class="nav-menu"><a href="#service">Service</a></li>
+            <li class="nav-menu"><a href="#our-work">Our Work</a></li>
+            <li class="nav-menu"><a href="#team">Team</a></li>
           </ul>
         </nav>
 
         <div class="btn-container">
-          <button class="btn">Contact Us</button>
+          <a href="#contact-us">
+            <button class="btn contact-us-btn">Contact Us</button></a
+          >
         </div>
 
         <div class="hamburger-button">
@@ -43,7 +45,7 @@
       </header>
 
       <!-- 2. Hero section -->
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="text">
           <h2>Build with the <span>Future.</span></h2>
           <p>
@@ -51,7 +53,7 @@
             solutions, we help brands turn ideas into powerful digital
             experiences that connect, engage, and scale.
           </p>
-          <button class="btn">Let's Talk</button>
+          <a href="#contact-us"><button class="btn">Let's Talk</button></a>
         </div>
         <div class="pict">
           <img src="./assets/images/hero-hand.png" alt="phone" />
@@ -59,7 +61,7 @@
       </section>
 
       <!-- 3. Who we are section -->
-      <section class="who-we-are">
+      <section class="who-we-are" id="about">
         <h2>Who we are</h2>
         <p>
           We're a group of tech students trained in
@@ -69,7 +71,7 @@
       </section>
 
       <!-- 4. What we do section -->
-      <section class="what-we-do">
+      <section class="what-we-do" id="service">
         <div class="text">
           <h2>What We Do</h2>
           <p>We offer simple tech solutions to help your ideas grow.</p>
@@ -116,7 +118,7 @@
       </section>
 
       <!-- 5. Our work section -->
-      <section class="our-work">
+      <section class="our-work" id="our-work">
         <div class="text">
           <h2>Our Work</h2>
           <p>See what we've built with passion and purpose</p>
@@ -147,7 +149,7 @@
       </section>
 
       <!-- 6. Meet the Team Section -->
-      <section class="meet-the-team">
+      <section class="meet-the-team" id="team">
         <div class="text">
           <h2>Meet the Team</h2>
           <p>A group of future-ready tech makers.</p>
@@ -163,7 +165,7 @@
       </section>
 
       <!-- 7. Let’s Collaborate Section -->
-      <section class="let-us-colaborate">
+      <section class="let-us-colaborate" id="contact-us">
         <div class="text">
           <h2>Let's Collaborate</h2>
           <p>Need a tech team? We're ready to help</p>

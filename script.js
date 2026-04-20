@@ -9,9 +9,12 @@ hamburgerBtn.addEventListener('click', function () {
 
 document.addEventListener('click', function (event) {
   const isHeader = event.target.closest('header');
+  const isNavMenu = event.target.closest('.nav-menu');
+  const isContactUsBtn = event.target.closest('.contact-us-btn');
   console.log(event.target);
-  if (!isHeader) {
+  if (!isHeader || isNavMenu || isContactUsBtn) {
     btnContainer.classList.remove('open');
     menu.classList.remove('open');
+    hamburgerBtn.classList.remove('open');
   }
 });
