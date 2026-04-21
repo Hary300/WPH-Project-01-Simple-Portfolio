@@ -18,3 +18,14 @@ document.addEventListener('click', function (event) {
     hamburgerBtn.classList.remove('open');
   }
 });
+
+let resizeTimeout;
+
+window.addEventListener('resize', function () {
+  document.documentElement.classList.add('no-transition');
+
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    document.documentElement.classList.remove('no-transition');
+  }, 50);
+});

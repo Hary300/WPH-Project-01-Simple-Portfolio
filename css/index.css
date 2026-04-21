@@ -28,6 +28,10 @@ img {
   max-width: 100%;
 }
 
+.no-transition * {
+  transition: none !important;
+}
+
 /* Base */
 html {
   scroll-behavior: smooth;
@@ -86,6 +90,7 @@ header {
   left: 0;
   z-index: 10;
   transform: translateY(-200%);
+  transition: 0.3s;
 }
 
 .menu.open {
@@ -339,7 +344,8 @@ header {
 
 .members {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
   gap: 20px;
 }
 
