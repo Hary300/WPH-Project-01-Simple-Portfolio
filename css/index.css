@@ -218,6 +218,7 @@ header {
   font-weight: 700;
   color: #fdfdfd;
 }
+
 .who-we-are p {
   text-align: center;
   font-size: 18px;
@@ -225,6 +226,7 @@ header {
   line-height: 28px;
   color: #717680;
 }
+
 .who-we-are p span {
   color: #fdfdfd;
 }
@@ -266,7 +268,6 @@ header {
   border: 1px solid #181d27;
   border-radius: 12px;
   padding: 16px;
-  gap: 20px;
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
@@ -276,11 +277,15 @@ header {
   transform: scale(1.05);
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.card img {
+  margin-bottom: 20px;
+}
 .card h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 34px;
-  margin-bottom: 20px;
+
   color: #fdfdfd;
 }
 .card p {
