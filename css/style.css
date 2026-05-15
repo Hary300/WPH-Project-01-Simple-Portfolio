@@ -1,12 +1,146 @@
-/* code here */
-
-/* font family */
+/* ========================================
+     FONT FAMILY
+  ========================================= */
 @font-face {
   font-family: 'Inter';
   src: url('../assets/font/Inter_24pt-Black.ttf');
 }
 
-/* RESET */
+/* ========================================
+   DESIGN SYSTEM TOKENS
+   Foundations
+   - Typography
+   - Colors
+   - Radius
+   - Spacing
+======================================== */
+
+:root {
+  /* ========================================
+     FOUNDATIONS — TYPOGRAPHY
+  ========================================= */
+
+  /* Font Family */
+  --font-family-primary: 'Inter', sans-serif;
+
+  /* Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Display Typography */
+  --display-3xl-size: 3.75rem;
+  --display-3xl-line-height: 4.5rem;
+
+  --display-2xl-size: 3rem;
+  --display-2xl-line-height: 3.75rem;
+  --display-2xl-letter-spacing: -0.02em;
+
+  --display-xl-size: 2.5rem;
+  --display-xl-line-height: 3rem;
+  --display-xl-letter-spacing: -0.02em;
+
+  --display-lg-size: 2.25rem;
+  --display-lg-line-height: 2.75rem;
+  --display-lg-letter-spacing: -0.02em;
+
+  --display-md-size: 2rem;
+  --display-md-line-height: 2.5rem;
+
+  --display-sm-size: 1.75rem;
+  --display-sm-line-height: 2.375rem;
+
+  --display-xs-size: 1.5rem;
+  --display-xs-line-height: 2.25rem;
+
+  /* Text Typography */
+  --text-xl-size: 1.25rem;
+  --text-xl-line-height: 2.125rem;
+
+  --text-lg-size: 1.125rem;
+  --text-lg-line-height: 2rem;
+
+  --text-md-size: 1rem;
+  --text-md-line-height: 1.875rem;
+
+  --text-sm-size: 0.875rem;
+  --text-sm-line-height: 1.75rem;
+
+  --text-xs-size: 0.75rem;
+  --text-xs-line-height: 1.5rem;
+
+  /* ========================================
+     FOUNDATIONS — COLORS
+  ========================================= */
+
+  /* Base */
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+
+  /* Primary */
+  --color-primary-100: #421abc;
+
+  /* Muted */
+  --color-purple-muted: #210a5e4d;
+
+  /* Neutral */
+  --color-neutral-25: #fdfdfd;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e9eaeb;
+  --color-neutral-300: #d5d7da;
+  --color-neutral-400: #a4a7ae;
+  --color-neutral-500: #717680;
+  --color-neutral-600: #535862;
+  --color-neutral-700: #414651;
+  --color-neutral-800: #252b37;
+  --color-neutral-900: #181d27;
+  --color-neutral-950: #0a0d12;
+
+  /* ========================================
+     FOUNDATIONS — RADIUS
+  ========================================= */
+
+  --radius-none: 0rem;
+  --radius-xxs: 0.125rem;
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+  --radius-4xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ========================================
+     FOUNDATIONS — SPACING
+  ========================================= */
+
+  --spacing-none: 0rem;
+  --spacing-xxs: 0.125rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.375rem;
+  --spacing-md: 0.5rem;
+  --spacing-lg: 0.75rem;
+  --spacing-xl: 1rem;
+  --spacing-2xl: 1.25rem;
+  --spacing-3xl: 1.5rem;
+  --spacing-4xl: 2rem;
+  --spacing-5xl: 2.5rem;
+  --spacing-6xl: 3rem;
+  --spacing-7xl: 4rem;
+  --spacing-8xl: 5rem;
+  --spacing-9xl: 6rem;
+  --spacing-10xl: 8rem;
+  --spacing-11xl: 8.75rem;
+}
+
+/* ========================================
+     RESET
+  ========================================= */
 * {
   margin: 0;
   padding: 0;
@@ -32,23 +166,27 @@ img {
   transition: none !important;
 }
 
-/* Base */
+/* ========================================
+     BASE
+  ========================================= */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: black;
-  font-family: 'Inter';
-  color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-base-black);
+  font-family: var(--font-family-primary);
+  color: var(--color-neutral-25);
 }
 
 section {
   scroll-margin-top: 80px;
 }
 
-/* 1. header */
-/* Style navbar */
+/* ========================================
+     1. HEADER SECTION
+  ========================================= */
+
 header {
   display: flex;
   position: sticky;
@@ -67,7 +205,7 @@ header {
   width: 100%;
   height: 100%;
   z-index: 30;
-  background-color: black;
+  background-color: var(--color-base-black);
 }
 
 /* Logo */
@@ -77,11 +215,11 @@ header {
   font-size: 24px;
 }
 
-/* menu */
+/* Menu */
 .menu {
   width: 100%;
   padding: 0 16px 20px;
-  background-color: black;
+  background-color: var(--color-base-black);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -98,7 +236,7 @@ header {
   transform: translateY(0);
 }
 
-/* Style nav links */
+/* Nav links */
 .nav-links {
   display: flex;
   flex-direction: column;
@@ -106,14 +244,13 @@ header {
 }
 
 .nav-links a {
-  color: #fdfdfd;
   font-weight: 200;
   font-size: 16px;
 }
 
-/* btn-container */
+/* Button container */
 .btn-container {
-  background-color: black;
+  background-color: var(--color-base-black);
   padding: 10px 16px;
   position: absolute;
   width: 100%;
@@ -128,7 +265,7 @@ header {
   transform: translateY(0);
 }
 
-/* Style tombol Contact Us */
+/* Button */
 .btn {
   position: relative;
   border: none;
@@ -136,13 +273,13 @@ header {
   font-weight: 600;
   font-size: 14px;
   padding: 12px;
-  background-color: #421abc;
-  color: #ffffff;
+  background-color: var(--color-primary-100);
+  color: var(--color-base-white);
   border-radius: 9999px;
   cursor: pointer;
 }
 
-/* hamburger */
+/* Hamburger */
 .hamburger-button {
   display: flex;
   position: relative;
@@ -156,7 +293,7 @@ header {
 .hamburger-button span {
   height: 3px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-neutral-25);
   transition: 0.3s;
 }
 
@@ -170,12 +307,19 @@ header {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* 2. hero section */
+/* ========================================
+     2. HERO SECTION
+  ========================================= */
+
 .hero {
   display: flex;
   flex-direction: column;
   padding: 24px 16px 0;
-  background: linear-gradient(to top, #210a5e4d, transparent);
+  background: linear-gradient(
+    to top,
+    var(--color-purple-muted),
+    var(--color-base-black)
+  );
 }
 
 .hero .text {
@@ -186,14 +330,13 @@ header {
 
 .hero .text h2 {
   font-weight: 700;
-  color: #fdfdfd;
   font-size: 50px;
 }
 .hero .text h2 span {
   font-style: italic;
 }
 .hero .text p {
-  color: #717680;
+  color: var(--color-neutral-500);
   font-weight: 300;
   font-size: 16px;
   line-height: 30px;
@@ -204,7 +347,10 @@ header {
   margin: 0 auto;
 }
 
-/* 3. Who we are section */
+/* ========================================
+     3. WHO WE ARE SECTION
+  ========================================= */
+
 .who-we-are {
   display: flex;
   flex-direction: column;
@@ -216,7 +362,6 @@ header {
 .who-we-are h2 {
   font-size: 28px;
   font-weight: 700;
-  color: #fdfdfd;
 }
 
 .who-we-are p {
@@ -224,14 +369,16 @@ header {
   font-size: 18px;
   font-weight: 600;
   line-height: 28px;
-  color: #717680;
 }
 
 .who-we-are p span {
-  color: #fdfdfd;
+  color: var(--color-neutral-500);
 }
 
-/* 4. What we do section */
+/* ========================================
+     4. WHAT WE DO SECTION
+  ========================================= */
+
 .what-we-do {
   display: flex;
   flex-direction: column;
@@ -244,7 +391,7 @@ header {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #fdfdfd;
+  color: var(--color-neutral-25);
 }
 
 .what-we-do .text p {
@@ -252,7 +399,7 @@ header {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
-  color: #717680;
+  color: var(--color-neutral-500);
 }
 
 .card-grid {
@@ -260,12 +407,13 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border: 1px solid #181d27;
+  border: 1px solid var(--color-neutral-900);
   border-radius: 12px;
   padding: 16px;
   text-align: center;
@@ -275,7 +423,7 @@ header {
 
 .card:hover {
   transform: scale(1.05);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-neutral-950);
 }
 
 .card img {
@@ -285,18 +433,19 @@ header {
   font-weight: 700;
   font-size: 18px;
   line-height: 34px;
-
-  color: #fdfdfd;
 }
 .card p {
   font-weight: 300;
   font-size: 14px;
   line-height: 30px;
   margin-bottom: 16px;
-  color: #717680;
+  color: var(--color-neutral-500);
 }
 
-/* 5. Our work section */
+/* ========================================
+     5. OUR WORK SECTION
+  ========================================= */
+
 .our-work {
   display: flex;
   flex-direction: column;
@@ -305,17 +454,17 @@ header {
   gap: 24px;
   text-align: center;
 }
+
 .our-work .text h2 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #fdfdfd;
 }
+
 .our-work .text p {
   font-weight: 300;
   font-size: 14px;
-
-  color: #717680;
+  color: var(--color-neutral-500);
 }
 .portfolio-card {
   display: flex;
@@ -324,7 +473,10 @@ header {
   gap: 20px;
 }
 
-/* 6. Meet the Team Section */
+/* ========================================
+     6. MEET THE TEAM SECTION
+  ========================================= */
+
 .meet-the-team {
   display: flex;
   flex-direction: column;
@@ -337,14 +489,13 @@ header {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #fdfdfd;
 }
 .meet-the-team .text p {
   font-weight: 300;
   font-size: 14px;
   line-height: 30px;
   margin-bottom: 16px;
-  color: #717680;
+  color: var(--color-neutral-500);
 }
 
 .members {
@@ -354,8 +505,11 @@ header {
   gap: 20px;
 }
 
-/* 7. Let’s Collaborate Section */
-.let-us-colaborate {
+/* ========================================
+     7. LET'S COLLABORATE SECTION
+  ========================================= */
+
+.let-us-collaborate {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -363,21 +517,20 @@ header {
   gap: 24px;
   text-align: center;
 }
-.let-us-colaborate .text h2 {
+.let-us-collaborate .text h2 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #fdfdfd;
 }
-.let-us-colaborate .text p {
+
+.let-us-collaborate .text p {
   font-weight: 300;
   font-size: 14px;
   line-height: 30px;
-
-  color: #717680;
+  color: var(--color-neutral-500);
 }
 
-/* form */
+/* Form */
 .form {
   display: flex;
   flex-direction: column;
@@ -392,20 +545,19 @@ header {
   font-size: 14px;
   font-weight: 500;
   line-height: 28px;
-  color: #fdfdfd;
   text-align: left;
 }
 
 .form div input,
 .form div textarea {
   background: transparent;
-  border: 1px solid #252b37;
+  border: 1px solid var(--color-neutral-800);
   border-radius: 12px;
   padding: 12px;
-  color: #fdfdfd;
   font-weight: 100;
   font-size: 14px;
 }
+
 .form div textarea {
   resize: vertical;
   min-height: 134px;
@@ -413,21 +565,24 @@ header {
 
 input::placeholder,
 textarea::placeholder {
-  color: #717680;
+  color: var(--color-neutral-500);
   font-weight: 300;
   font-size: 14px;
 }
 
-/* 8. footer */
+/* ========================================
+     8. FOOTER SECTION
+  ========================================= */
+
 footer {
   padding: 24px 20px;
-  border-top: 1px solid #252b37;
+  border-top: 1px solid var(--color-neutral-500);
   text-align: center;
   font-weight: 300;
   font-size: 14px;
   line-height: 30px;
   margin-bottom: 16px;
-  color: #717680;
+  color: var(--color-neutral-500);
 }
 
 footer a {
@@ -440,20 +595,25 @@ footer a:hover {
 }
 
 @media (min-width: 768px) {
-  /* 1. Header */
+  /* ========================================
+     1. HEADER SECTION
+  ========================================= */
+
   header {
     padding: 24px 70px;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: var(--color-base-black);
   }
 
   .hamburger-button {
     display: none;
   }
+
   .bg-header {
     display: none;
   }
+
   .menu {
     width: auto;
     align-items: center;
@@ -468,6 +628,7 @@ footer a:hover {
     flex-direction: row;
     gap: 20px;
   }
+
   .btn-container {
     padding: 0;
     max-width: 160px;
@@ -476,7 +637,10 @@ footer a:hover {
     transition: none;
   }
 
-  /* 2. Hero section */
+  /* ========================================
+     2. HERO SECTION
+  ========================================= */
+
   .hero {
     position: relative;
     flex-direction: row;
@@ -499,22 +663,34 @@ footer a:hover {
     right: 50px;
   }
 
-  /* 3. Who we are section */
+  /* ========================================
+     3. WHO WE ARE SECTION
+  ========================================= */
+
   .who-we-are {
     padding: 40px 70px;
   }
 
-  /* 4. What we do section */
+  /* ========================================
+     4. WHAT WE DO SECTION
+  ========================================= */
 
   .what-we-do {
     padding: 40px 70px;
   }
-  /* 5. Our work section */
+
+  /* ========================================
+     5. OUR WORK SECTION
+  ========================================= */
+
   .our-work {
     padding: 40px 70px;
   }
 
-  /* 6. Meet the Team Section */
+  /* ========================================
+     6. MEET THE TEAM SECTION
+  ========================================= */
+
   .meet-the-team {
     padding: 40px 70px;
   }
@@ -525,8 +701,11 @@ footer a:hover {
     gap: 100px;
   }
 
-  /* 7. Let’s Collaborate Section */
-  .let-us-colaborate {
+  /* ========================================
+     7. LET'S COLLABORATE SECTION
+  ========================================= */
+
+  .let-us-collaborate {
     padding: 40px 70px;
   }
 
@@ -538,7 +717,10 @@ footer a:hover {
 }
 
 @media (min-width: 1024px) {
-  /* 2. Hero section */
+  /* ========================================
+     2. HERO SECTION
+  ========================================= */
+
   .hero {
     padding: 100px 70px;
   }
@@ -563,7 +745,10 @@ footer a:hover {
     margin: auto;
   }
 
-  /* 1. Header */
+  /* ========================================
+     1. HEADER SECTION
+  ========================================= */
+
   header {
     padding: 24px 140px;
   }
@@ -572,7 +757,10 @@ footer a:hover {
     display: none;
   }
 
-  /* 2. Hero */
+  /* ========================================
+     2. HERO SECTION
+  ========================================= */
+
   .hero {
     padding: 234px 140px 170px;
   }
@@ -580,6 +768,7 @@ footer a:hover {
   .hero .text {
     max-width: 650px;
   }
+
   .hero .text h2 {
     font-size: 56px;
   }
@@ -599,20 +788,28 @@ footer a:hover {
     right: 140px;
   }
 
-  /* 3. Who we are section */
+  /* ========================================
+     3. WHO WE ARE SECTION
+  ========================================= */
+
   .who-we-are {
     gap: 32px;
     padding: 40px 140px;
   }
+
   .who-we-are h2 {
     font-size: 40px;
   }
+
   .who-we-are p {
     font-size: 32px;
     line-height: 56px;
   }
 
-  /* 4. What we do section */
+  /* ========================================
+     4. WHAT WE DO SECTION
+  ========================================= */
+
   .what-we-do {
     padding: 40px 140px;
     gap: 64px;
@@ -631,7 +828,10 @@ footer a:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* 5. Our work section */
+  /* ========================================
+     5. OUR WORK SECTION
+  ========================================= */
+
   .our-work {
     padding: 40px 140px;
     gap: 64px;
@@ -651,35 +851,44 @@ footer a:hover {
     gap: 20px;
   }
 
-  /* 6. Meet the Team Section */
+  /* ========================================
+     6. MEET THE TEAM SECTION
+  ========================================= */
+
   .meet-the-team {
     padding: 40px 140px;
     gap: 64px;
   }
+
   .meet-the-team .text h2 {
     font-size: 40px;
     margin-bottom: 16px;
   }
+
   .meet-the-team .text p {
     font-size: 20px;
   }
+
   .members {
     grid-template-columns: repeat(4, auto);
     gap: 56px;
   }
 
-  /* 7. Let’s Collaborate Section */
-  .let-us-colaborate {
+  /* ========================================
+     7. LET'S COLLABORATE SECTION
+  ========================================= */
+
+  .let-us-collaborate {
     padding: 40px 140px;
     gap: 64px;
   }
 
-  .let-us-colaborate .text h2 {
+  .let-us-collaborate .text h2 {
     font-size: 40px;
 
     margin-bottom: 16px;
   }
-  .let-us-colaborate .text p {
+  .let-us-collaborate .text p {
     font-size: 20px;
   }
 }
